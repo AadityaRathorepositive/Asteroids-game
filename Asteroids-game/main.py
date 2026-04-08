@@ -14,17 +14,19 @@ def main():
     y= SCREEN_HEIGHT/2
     player=Player(x,y)
     
+
     while True:
+
         log_state()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
         screen.fill("black")
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
         delta_time=pygame.time.Clock()
-        find_delta_time=delta_time.tick(60)
-        dt=find_delta_time/1000
+        dt=delta_time.tick(60)/1000
         #print(dt)
 
         

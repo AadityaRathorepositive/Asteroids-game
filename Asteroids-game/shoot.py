@@ -1,11 +1,11 @@
 from circleshape import CircleShape
+from asteroid import *
 import pygame
-from constants import LINE_WIDTH
+from constants import *
 
-
-class Asteroid(CircleShape):
-    def __init__(self, x, y, radius):
-        super().__init__(x, y, radius)
+class Shot(CircleShape):
+    def __init__(self,x,y,radius):
+        super().__init__(x,y,radius)
     def draw(self,screen):
         color="white"
         
